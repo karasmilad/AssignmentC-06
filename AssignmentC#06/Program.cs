@@ -28,6 +28,14 @@
             }
             return "Prime";
         }
+        public static int[] MinMaxArray(ref int[] arr)
+        {
+            Array.Sort(arr);
+            int min = arr[0];
+            int max = arr[arr.Length - 1];
+            int[] returnValue = { min, max };
+            return returnValue;
+        }
         static void Main(string[] args)
         {
             #region Question01
@@ -55,6 +63,11 @@
             #endregion
             #region Question05
             //Console.WriteLine(isPrime(10));
+            #endregion
+            #region Question06
+            int[] ints = { 20, 30, 0, 60, 80, -1 };
+            int[] minMax = MinMaxArray(ref ints);
+            Console.WriteLine($"Minimum: {minMax[0]}, Maximum: {minMax[1]}");
             #endregion
         }
     }
