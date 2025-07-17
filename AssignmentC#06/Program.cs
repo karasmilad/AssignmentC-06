@@ -45,6 +45,18 @@
             }
             Console.WriteLine(result);
         }
+        public static void ChangeChar(string String , int Index , char NewChar)
+        {
+            if (Index < 0 || Index >= String.Length)
+            {
+                Console.WriteLine("Index out of bounds");
+                return;
+            }
+            char[] chars = String.ToCharArray();
+            chars[Index] = NewChar;
+            string charsString = new string(chars);
+            Console.WriteLine(charsString);
+        }
         static void Main(string[] args)
         {
             #region Question01
@@ -80,6 +92,9 @@
             #endregion
             #region Question07
             //factorialNumber(10);
+            #endregion
+            #region Question08
+            ChangeChar("Hello World", 4, 'a');
             #endregion
         }
     }
