@@ -19,6 +19,15 @@
             }
             return sum;
         }
+        public static string isPrime(int number)
+        {
+            if (number <= 1) return "Not Prime";
+            for (int i = 2; i <= Math.Sqrt(number); i++)
+            {
+                if (number % i == 0) return "Not Prime";
+            }
+            return "Prime";
+        }
         static void Main(string[] args)
         {
             #region Question01
@@ -35,14 +44,17 @@
             //calculator(5,10,20,10);
             #endregion
             #region Question04
-            int input;
-            do
-            {
-                Console.Write("Enter a number: ");
-            }
-            while (int.TryParse(Console.ReadLine(), out input));
-            int result = SumOfDigits(input);
-            Console.WriteLine($"The sum of the digits of the number {input} is: {result}");
+            //int input;
+            //do
+            //{
+            //    Console.Write("Enter a number: ");
+            //}
+            //while (int.TryParse(Console.ReadLine(), out input));
+            //int result = SumOfDigits(input);
+            //Console.WriteLine($"The sum of the digits of the number {input} is: {result}");
+            #endregion
+            #region Question05
+            //Console.WriteLine(isPrime(10));
             #endregion
         }
     }
