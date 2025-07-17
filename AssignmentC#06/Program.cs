@@ -36,6 +36,15 @@
             int[] returnValue = { min, max };
             return returnValue;
         }
+        public static void factorialNumber(uint number)
+        {
+            uint result = 1;
+            for (uint i = 1; i<= number; i++)
+            {
+                result *= i;
+            }
+            Console.WriteLine(result);
+        }
         static void Main(string[] args)
         {
             #region Question01
@@ -65,9 +74,12 @@
             //Console.WriteLine(isPrime(10));
             #endregion
             #region Question06
-            int[] ints = { 20, 30, 0, 60, 80, -1 };
-            int[] minMax = MinMaxArray(ref ints);
-            Console.WriteLine($"Minimum: {minMax[0]}, Maximum: {minMax[1]}");
+            //int[] ints = { 20, 30, 0, 60, 80, -1 };
+            //int[] minMax = MinMaxArray(ref ints);
+            //Console.WriteLine($"Minimum: {minMax[0]}, Maximum: {minMax[1]}");
+            #endregion
+            #region Question07
+            //factorialNumber(10);
             #endregion
         }
     }
